@@ -1,15 +1,78 @@
-Source: template-repository
-Section: unknown
+Source: haskell-typed-process
+Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
+Uploaders: Clint Adams <clint@debian.org>
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Section: haskell
+Rules-Requires-Root: no
+Build-Depends: debhelper (>= 10),
+ haskell-devscripts-minimal | haskell-devscripts (>= 0.8),
+ cdbs,
+ ghc (>= 8.4.3),
+ ghc-prof,
+ libghc-async-dev (>= 2.0),
+ libghc-async-prof,
+ libghc-unliftio-core-dev,
+ libghc-unliftio-core-prof,
+ libghc-base64-bytestring-dev,
+ libghc-hspec-dev,
+ libghc-temporary-dev,
+Build-Depends-Indep: ghc-doc,
+ libghc-async-doc,
+ libghc-unliftio-core-doc,
+Standards-Version: 4.6.1
+Homepage: https://github.com/fpco/typed-process
+Vcs-Browser: https://salsa.debian.org/haskell-team/DHG_packages/tree/master/p/haskell-typed-process
+Vcs-Git: https://salsa.debian.org/haskell-team/DHG_packages.git [p/haskell-typed-process]
+X-Description: run external processes, with strong typing of streams
+ This library provides the ability to launch and interact with
+ external processes. It wraps around the process library, and intends
+ to improve upon it by:
+ .
+  * Using type variables to represent the standard streams, making
+    them easier to manipulate
+  * Use proper concurrency (e.g., the async library) in place of the
+    weird lazy I/O tricks for such things as consuming output streams
+  * Allow for more complex concurrency by providing STM-based functions
+  * Using binary I/O correctly
+  * Providing a more composable API, designed to be easy to use for
+    both simple and complex use cases
 
-Package: template-repository
+Package: libghc-typed-process-dev
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Depends: ${haskell:Depends},
+ ${misc:Depends},
+ ${shlibs:Depends},
+Recommends: ${haskell:Recommends},
+Suggests: ${haskell:Suggests},
+Conflicts: ${haskell:Conflicts},
+Provides: ${haskell:Provides},
+Description: ${haskell:ShortDescription}${haskell:ShortBlurb}
+ ${haskell:LongDescription}
+ .
+ ${haskell:Blurb}
+
+Package: libghc-typed-process-prof
+Architecture: any
+Depends: ${haskell:Depends},
+ ${misc:Depends},
+Recommends: ${haskell:Recommends},
+Suggests: ${haskell:Suggests},
+Conflicts: ${haskell:Conflicts},
+Provides: ${haskell:Provides},
+Description: ${haskell:ShortDescription}${haskell:ShortBlurb}
+ ${haskell:LongDescription}
+ .
+ ${haskell:Blurb}
+
+Package: libghc-typed-process-doc
+Architecture: all
+Section: doc
+Depends: ${haskell:Depends},
+ ${misc:Depends},
+Recommends: ${haskell:Recommends},
+Suggests: ${haskell:Suggests},
+Conflicts: ${haskell:Conflicts},
+Description: ${haskell:ShortDescription}${haskell:ShortBlurb}
+ ${haskell:LongDescription}
+ .
+ ${haskell:Blurb}
