@@ -1,5 +1,70 @@
-template-repository (1.0-1) unstable; urgency=medium
+haskell-typed-process (0.2.10.1-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream version.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Clint Adams <clint@debian.org>  Tue, 14 Jun 2022 15:49:23 -0400
+
+haskell-typed-process (0.2.6.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Clint Adams <clint@debian.org>  Sat, 30 May 2020 21:58:08 -0400
+
+haskell-typed-process (0.2.5.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Clint Adams <clint@debian.org>  Sun, 28 Jul 2019 15:44:47 -0400
+
+haskell-typed-process (0.2.3.0-2) unstable; urgency=medium
+
+  * Remove build dependency on libghc-stm-dev (provided by ghc-8.4.3)
+
+ -- Ilias Tsitsimpis <iliastsi@debian.org>  Mon, 01 Oct 2018 17:50:20 +0300
+
+haskell-typed-process (0.2.3.0-1) unstable; urgency=medium
+
+  [ Clint Adams ]
+  * Set Rules-Requires-Root to no.
+
+  [ Ilias Tsitsimpis ]
+  * New upstream release
+
+ -- Ilias Tsitsimpis <iliastsi@debian.org>  Sat, 29 Sep 2018 17:03:24 +0300
+
+haskell-typed-process (0.2.2.0-1) unstable; urgency=medium
+
+  [ Ilias Tsitsimpis ]
+  * Use salsa.debian.org URLs in Vcs-{Browser,Git} fields
+
+  [ Clint Adams ]
+  * Bump to Standards-Version 4.1.4.
+  * New upstream release
+
+ -- Clint Adams <clint@debian.org>  Mon, 09 Apr 2018 17:20:21 -0400
+
+haskell-typed-process (0.1.1-1) unstable; urgency=medium
+
+  [ Sean Whitton ]
+  * New upstream release
+
+  [ Ilias Tsitsimpis ]
+  * Change Priority to optional. Since Debian Policy version 4.0.1,
+    priority extra has been deprecated.
+  * Use the HTTPS form of the copyright-format URL
+  * Modify d/watch and Source field in d/copyright to use HTTPS
+  * Declare compliance with Debian policy 4.1.1
+
+ -- Ilias Tsitsimpis <iliastsi@debian.org>  Sun, 05 Nov 2017 14:10:59 +0200
+
+haskell-typed-process (0.1.0.0-2) unstable; urgency=medium
+
+  * Don't pass -N for the test suite.  closes: #864856.
+
+ -- Clint Adams <clint@debian.org>  Mon, 19 Jun 2017 13:57:53 -0400
+
+haskell-typed-process (0.1.0.0-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Clint Adams <clint@debian.org>  Mon, 12 Jun 2017 07:31:18 -0400
